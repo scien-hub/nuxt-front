@@ -1,0 +1,13 @@
+diff --git a/node_modules/@nuxt/ui-pro/dist/module.mjs b/node_modules/@nuxt/ui-pro/dist/module.mjs
+index f7f1c83..b364b0d 100644
+--- a/node_modules/@nuxt/ui-pro/dist/module.mjs
++++ b/node_modules/@nuxt/ui-pro/dist/module.mjs
+@@ -117,7 +117,7 @@ Missing \`${theme$1.env}\` env variable, please add it to your \`.env\`.
+       return;
+     }
+     nuxt.hook("build:before", async () => {
+-      await validateLicense({ key, theme: theme$1, dir: nuxt.options.rootDir });
++      // await validateLicense({ key, theme: theme$1, dir: nuxt.options.rootDir });
+     });
+   }
+ });

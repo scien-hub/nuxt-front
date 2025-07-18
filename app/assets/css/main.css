@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "@nuxt/ui-pro";
+
+@plugin "@tailwindcss/typography";
+
+:root {
+    --ui-header-height: --spacing(12);
+}

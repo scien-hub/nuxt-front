@@ -1,0 +1,18 @@
+variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    GIT_SUBMODULE_DEPTH: 1
+
+build:
+    tags:
+        - "runner"
+        - "x86"
+    stage: build
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "main"'
+        - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    before_script:
+        - npm ci
+        - npm run lint
+        - npm run prettier
+    script:
+        - npm run build
